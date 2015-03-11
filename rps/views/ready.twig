@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link bootstrap here>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
         <title>Rock Paper Scissors</title>
     </head>
     <body>
-        <h2>Prepare to Fight</h2>
-
         <!-- 1 button here, links to results page -->
-
         <form action="/results" method="post">
             <div class="container">
+                <h2>Prepare to Fight</h2>
                 <button type='submit' class='btn btn-success'>Fight</button>
+                <input type="hidden" name="player1" value="{{ player1 }}"/>
+                <input type="hidden" name="player2" value="{{ player2 }}"/>
             </div>
         </form>
     </body>

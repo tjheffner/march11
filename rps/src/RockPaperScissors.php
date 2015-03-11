@@ -23,7 +23,7 @@
                 return "Player 1";
             }
             else {
-                return "Draw";
+                return "No one";
             };
 
         }

@@ -25,18 +25,19 @@
     });
 
     $app->post("/p2select", function() use($app) {
-        return $app['twig']->render('p2select.twig');
+        $player1 = $_POST['player1'];
+        return $app['twig']->render('p2select.twig', array('player1' => $player1));
     });
 
     $app->post("/ready", function() use($app) {
-        return $app['twig']->render('ready.twig');
+        return $app['twig']->render('ready.twig', array('player1' => $_POST['player1'], 'player2' => $_POST['player2']));
     });
 
     $app->post("/results", function() use($app) {
-        $results = new RockPaperScissors($_POST['input1'], $_POST['input2']);
+        $results = new RockPaperScissors;
+        $winner = $results->shoot($_POST['player1'], $_POST['player2']);
         $results->save();
-
-        return $app['twig']->render('results.twig', array('newwinner' => $results));
+        return $app['twig']->render('results.twig', array('newwinner' => $winner));
     });
 
     return $app;
