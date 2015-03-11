@@ -27,7 +27,18 @@
             };
 
         }
-
+        function save()
+        {
+            array_push($_SESSION['winner'], $this);
+        }
+        static function getAll()
+        {
+            return $_SESSION['winner'];
+        }
+        static function deleteAll()
+        {
+            $_SESSION['winner'] = array();
+        }
     }
 
 ?>

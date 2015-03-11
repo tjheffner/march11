@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link bootstrap here>
+        <title>Rock Paper Scissors: Results</title>
+    </head>
+    <body>
+        <h2>Outcome:</h2>
+        {% for player in newwinner %}
+            <p>{{ player }} wins!<p>
+        {% endfor %}
+
+        <!-- 2 buttons here, one links to player 1 (rematch) -->
+        <!--                 one links to start   (new fight)-->
+
+        <form action="/start">
+            <div class="container">
+                <button type='submit' class='btn btn-success'>New Game</button>
+            </div>
+        </form>
+        <form action="/p1select">
+            <div class="container">
+                <button type='submit' class='btn btn-success'>Rematch</button>
+            </div>
+        </form>
+    </body>
+</html>
