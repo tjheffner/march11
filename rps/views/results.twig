@@ -2,25 +2,28 @@
 <html>
     <head>
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='/../css/styles.css'>
         <title>Rock Paper Scissors: Results</title>
     </head>
     <body>
-        <div class="container">
+        <div class="col-md-4 col-md-offset-3">
+            <div class="text-center">
             <h2>Outcome:</h2>
 
                 <p>{{ newwinner }} wins!<p>
+            </div>
 
 
             <h3>Current score:</h3>
             <p><strong>Player 1:</strong> {{ p1wins }} wins</p>
             <p><strong>Player 2:</strong> {{ p2wins }} wins</p>
 
-
+            <div class="text-center">
             <!-- 2 buttons here, one links to player 1 (rematch) -->
             <!--                 one links to start   (new fight)-->
             <form action="/p1select">
                 <div class="container">
-                    <button type='submit' class='btn btn-success'>Rematch</button>
+                    <button type='submit' class='btn btn-primary'>Rematch</button>
                 </div>
             </form>
             <br>
@@ -28,6 +31,7 @@
                 <div class="container">
                     <button type='submit' class='btn btn-info'>New Game</button>
                 </div>
+            </div>
             </form>
         </div>
     </body>
