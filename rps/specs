@@ -1,0 +1,26 @@
+spec1
+for inputs "rock" and "scissors" we return "rock wins".
+
+spec2
+for inputs "rock" and "paper" we return "paper wins".
+
+spec3
+for inputs "paper" and "scissors" we return "scissors wins".
+
+spec4
+for inputs "scissors" and "rock" we return "rock wins".
+
+spec5
+for inputs "paper" and "rock" we return "paper wins".
+
+spec6
+for inputs "scissors" and "paper" we return "scissors wins".
+
+spec7
+for inputs "rock" and "rock" we return "draw".
+
+spec8
+for inputs "scissors" and "scissors" we return "draw".
+
+spec9
+for inputs "paper" and "paper" we return "draw".
