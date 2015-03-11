@@ -6,12 +6,22 @@
     </head>
     <body>
         <!-- 3 buttons here, each link to player 2 -->
+
+        {% set array_key = random(6) %}
+        {% set rock = (["rock", "ro", "poisonous centipede", "hunter", "nimoy", "ick", "ching"]) %}
+        {% set paper = (["paper", "sham", "frog", "villager", "shatner", "ack", "chang"]) %}
+        {% set scissors = (["scissors", "bo", "snake", "fox", "takai", "ock", "walla"]) %}
+
+
+
         <form action="/p2select" method="post">
             <div class="container">
                 <h2>Player 1: Test Your Might</h2>
-                <button name="player1" type='submit' value="rock" class='btn btn-success'>Rock</button>
-                <button name="player1" type='submit' value="paper" class='btn btn-success'>Paper</button>
-                <button name="player1" type='submit' value="scissors" class='btn btn-success'>Scissor</button>
+                <button name="player1" type='submit' value="rock" class='btn btn-success'>{{ rock[array_key] }}</button>
+                <button name="player1" type='submit' value="paper" class='btn btn-success'>{{ paper[array_key] }}</button>
+                <button name="player1" type='submit' value="scissors" class='btn btn-success'>{{ scissors[array_key] }}</button>
+                <input type="hidden" name="array_key" value="{{ array_key }}"/>
+
             </div>
         </form>
     </body>

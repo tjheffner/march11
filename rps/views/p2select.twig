@@ -6,12 +6,17 @@
     </head>
     <body>
         <!-- 3 buttons here, each link to ready page -->
+
+        {% set rock = (["rock", "ro", "poisonous centipede", "hunter", "nimoy", "ick", "ching"]) %}
+        {% set paper = (["paper", "sham", "frog", "villager", "shatner", "ack", "chang"]) %}
+        {% set scissors = (["scissors", "bo", "snake", "fox", "takai", "ock", "walla"]) %}
+
         <form action="/ready" method="post">
             <div class="container">
                 <h2>Player 2: Test Your Might</h2>
-                <button name="player2" type='submit' value="rock" class='btn btn-success'>Rock</button>
-                <button name="player2" type='submit' value="paper" class='btn btn-success'>Paper</button>
-                <button name="player2" type='submit' value="scissors" class='btn btn-success'>Scissor</button>
+                <button name="player2" type='submit' value="rock" class='btn btn-success'>{{ rock[array_key] }}</button>
+                <button name="player2" type='submit' value="paper" class='btn btn-success'>{{  paper[array_key]  }}</button>
+                <button name="player2" type='submit' value="scissors" class='btn btn-success'>{{  scissors[array_key]  }}</button>
                 <input type="hidden" name="player1" value="{{ player1 }}"/>
             </div>
         </form>

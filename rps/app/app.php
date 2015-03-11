@@ -7,7 +7,6 @@
         $_SESSION['winner'] = array();
     }
 
-
     $app = new Silex\Application();
 
     $app['debug']=TRUE;
@@ -21,12 +20,14 @@
     });
 
     $app->get("/p1select", function() use ($app) {
+
         return $app['twig']->render('p1select.twig');
     });
 
     $app->post("/p2select", function() use($app) {
         $player1 = $_POST['player1'];
-        return $app['twig']->render('p2select.twig', array('player1' => $player1));
+        $array_key = $_POST['array_key'];
+        return $app['twig']->render('p2select.twig', array('player1' => $player1, 'array_key' => $array_key));
     });
 
     $app->post("/ready", function() use($app) {
