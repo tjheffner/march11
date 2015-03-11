@@ -25,6 +25,8 @@
             };
 
         }
+        /* These functions aren't really called anywhere, but are necessary for
+                the score counter to work. */
         function save()
         {
             array_push($_SESSION['winner'], $this);
@@ -33,6 +35,7 @@
         {
             return $_SESSION['winner'];
         }
+        /* This resets the counter to 0 when the start page is loaded. */
         static function deleteAll()
         {
             $_SESSION['winner'] = array();

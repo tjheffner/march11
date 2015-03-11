@@ -11,12 +11,27 @@
             <h2>Outcome:</h2>
 
                 <p>{{ newwinner }} wins!<p>
-            </div>
-
 
             <h3>Current score:</h3>
             <p><strong>Player 1:</strong> {{ p1wins }} wins</p>
             <p><strong>Player 2:</strong> {{ p2wins }} wins</p>
+
+            <!-- This array uses the array_key originally defined on /p1select to give a little info
+                    about the country of origin. -->
+
+            {% set description = (["You played the American game: Rock-Paper-Scissors.",
+                            "You played the (very) British game: Ro-Sham-Bo.",
+                            "You played the Chinese game: Poisonous centipede-Frog-Snake.",
+                            "You played the Korean game: Hunter-Villager-Fox.",
+                            "You played the United Federation of Planets game: Nimoy-Shatner-Takai.",
+                            "You played the English game: ick-ack-ock.",
+                            "You played the Victorian game: ching-chang-walla.",
+                            "You played the Canadian game: Hockey puck-Maple syrup-Caribou."]) %}
+
+        <br>
+            <p>{{ description[array_key] }}</p>
+        <br>
+        </div>
 
             <div class="text-center">
             <!-- 2 buttons here, one links to player 1 (rematch) -->
