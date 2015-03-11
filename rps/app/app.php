@@ -6,9 +6,14 @@
 
     $app['debug']=TRUE;
 
-    //twig stuff
+    $app->register(new Silex\Provider\TwigServiceProvider(), array(
+        'twig.path' => __DIR__."/../views"
+    ));
 
     $app->get("/", function() use ($app) {
+
+    //we want 3 buttons here, 1 for each player 1 input
+
         return "Home";
     });
 
