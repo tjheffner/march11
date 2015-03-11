@@ -27,3 +27,6 @@ for inputs "paper" and "paper" we return "draw".
 
 spec10
 the program keeps track of each players win record
+
+spec11
+implement different text for the buttons without changing the class definition
