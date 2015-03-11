@@ -2,7 +2,6 @@
     require_once __DIR__."/../vendor/autoload.php";
     require_once __DIR__."/../src/RockPaperScissors.php";
 
-
 /*
 Even though the winner array is not used in the rest of the code,
 the if statement is needed for the score counter to recognize that

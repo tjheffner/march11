@@ -25,16 +25,14 @@
             };
 
         }
-        /* These functions aren't really called anywhere, but are necessary for
+
+        /* This function is only called on the results page, and is only necessary for
                 the score counter to work. */
         function save()
         {
             array_push($_SESSION['winner'], $this);
         }
-        static function getAll()
-        {
-            return $_SESSION['winner'];
-        }
+
         /* This resets the counter to 0 when the start page is loaded. */
         static function deleteAll()
         {
