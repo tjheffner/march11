@@ -24,3 +24,6 @@ for inputs "scissors" and "scissors" we return "draw".
 
 spec9
 for inputs "paper" and "paper" we return "draw".
+
+spec10
+the program keeps track of each players win record

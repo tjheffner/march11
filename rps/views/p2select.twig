@@ -5,11 +5,14 @@
         <title>Rock Paper Scissors: Player 2 Select</title>
     </head>
     <body>
-        <!-- 3 buttons here, each link to ready page -->
+
+        <!-- twig arrays with global variations of the names -->
 
         {% set rock = (["rock", "ro", "poisonous centipede", "hunter", "nimoy", "ick", "ching"]) %}
         {% set paper = (["paper", "sham", "frog", "villager", "shatner", "ack", "chang"]) %}
         {% set scissors = (["scissors", "bo", "snake", "fox", "takai", "ock", "walla"]) %}
+
+        <!-- 3 buttons here, each link to ready page -->
 
         <form action="/ready" method="post">
             <div class="container">

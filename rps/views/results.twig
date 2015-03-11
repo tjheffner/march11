@@ -11,18 +11,22 @@
                 <p>{{ newwinner }} wins!<p>
 
 
+            <h3>Current score:</h3>
+            <p><strong>Player 1:</strong> {{ p1wins }} wins</p>
+            <p><strong>Player 2:</strong> {{ p2wins }} wins</p>
+
+
             <!-- 2 buttons here, one links to player 1 (rematch) -->
             <!--                 one links to start   (new fight)-->
-
-            <form action="/">
-                <div class="container">
-                    <button type='submit' class='btn btn-info'>New Game</button>
-                </div>
-            </form>
-                <br>
             <form action="/p1select">
                 <div class="container">
                     <button type='submit' class='btn btn-success'>Rematch</button>
+                </div>
+            </form>
+            <br>
+            <form action="/">
+                <div class="container">
+                    <button type='submit' class='btn btn-info'>New Game</button>
                 </div>
             </form>
         </div>
